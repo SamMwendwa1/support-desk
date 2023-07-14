@@ -1,10 +1,13 @@
 {
+  "homepage": "http://SamMwendwa1.github.io/support-desk",
   "name": "support-desk",
   "version": "1.0.0",
   "description": "Support Ticket App",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "nodemon backend/server.js --ignore client",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -32,6 +35,7 @@
     "react-toastify": "^9.1.3"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodeman": "^1.1.2"
   }
 }
